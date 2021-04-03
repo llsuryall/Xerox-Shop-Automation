@@ -57,6 +57,7 @@
                   ></span>
                 </div>
                 <input
+                  id="password"
                   type="password"
                   class="form-control"
                   placeholder="password"
@@ -73,6 +74,7 @@
               </div>
               <div class="form-group">
                 <input
+                  name="submit"
                   type="submit"
                   value="Login"
                   class="btn float-right login_btn"
@@ -82,7 +84,7 @@
           </div>
           <div class="card-footer">
             <div class="d-flex justify-content-center links">
-              Don't have an account?<a href="#">Sign Up</a>
+              Don't have an account?<a href="signup.html">Sign Up</a>
             </div>
             <div class="d-flex justify-content-center">
             </div>
@@ -90,5 +92,13 @@
         </div>
       </div>
     </div>
+    <script src="JS/sha256.min.js"></script>
+    <script>
+			const password=document.getElementById("password");
+			const passwordhash=document.getElementById("passwordhash");
+			password.onchange=function(){
+				passwordhash.value=sha256(password.value);
+			};
+    </script>
   </body>
 </html>
