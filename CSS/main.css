@@ -4,7 +4,7 @@ body {
     background-image: url('../Images/login.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: auto;
+    height: 100%;
     width: 100%;
     color: white;
     font-family: 'Numans', sans-serif;
@@ -14,6 +14,14 @@ body {
     height: 100%;
     width: 100%;
     align-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.btn {
+    border-radius: 6px;
+}
+
+.modal {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
