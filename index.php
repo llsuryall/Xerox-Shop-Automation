@@ -58,10 +58,6 @@
 			fclose($myfile);
 			$input = <<<INP
 				<br/><br/>
-			
-			
-            
-
 				<form align="center"  action="addfiles.php" method="post" enctype="multipart/form-data">
 					<input id="files" name="files[]" accept="application/pdf"  type="file" onchange="change_count(this);" required multiple/>
 					<input id="count" name="count" type="hidden" value="0"/>
