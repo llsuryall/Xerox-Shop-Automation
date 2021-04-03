@@ -61,14 +61,14 @@
 				<form align="center"  action="addfiles.php" method="post" enctype="multipart/form-data">
 					<input id="files" name="files[]" accept="application/pdf"  type="file" onchange="change_count(this);" required multiple/>
 					<input id="count" name="count" type="hidden" value="0"/>
-					<input name="submit" type="submit" value="Upload"/>
+					<input name="submit" class="btn btn-primary" type="submit" value="Upload"/>
 				</form>
 				<form align="center" action="deleteall.php" method="post">
-					<input class="btn btn-primary" onclick="print(this);" type="button" value="Print"/>
+					<input class="btn btn-success" onclick="print(this);" type="button" value="Print"/>
 					<input id="ver_code" type="hidden" name="ver_code" maxlength="6" size="6" value="000000"/>
 					<input id="sub_but" name="submit" type="hidden" value="Verify"/>
 				</form><br/>
-				<form align="center" action="payment.php"><input type="submit" value="Pay Rs. $price"/></form>
+				<form align="center" action="payment.php"><input type="submit" class="btn btn-warning" value="Pay Rs. $price"/></form>
 				<div align="center">Total no of pages - $scount<br/>
 				Total price - $price Rs.
 				</div>
