@@ -58,16 +58,10 @@
 			fclose($myfile);
 			$input = <<<INP
 				<br/><br/>
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add</button></div>
-                
-				<div class="modal" id="myModal">
-				<div class="modal-dialog">
-				<div class="modal-content">
+			
+			
+            
 
-				<div class="modal-header">
-				<h4 class="modal-title">Upload Files</h4>
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div><div class = "modal-body">
 				<form align="center"  action="addfiles.php" method="post" enctype="multipart/form-data">
 					<input id="files" name="files[]" accept="application/pdf"  type="file" onchange="change_count(this);" required multiple/>
 					<input id="count" name="count" type="hidden" value="0"/>
@@ -77,15 +71,10 @@
 					<input class="btn btn-primary" onclick="print(this);" type="button" value="Print"/>
 					<input id="ver_code" type="hidden" name="ver_code" maxlength="6" size="6" value="000000"/>
 					<input id="sub_but" name="submit" type="hidden" value="Verify"/>
-				</form><br/></div>
-				<div class="modal-footer">
+				</form><br/>
 				<form align="center" action="payment.php"><input type="submit" value="Pay Rs. $price"/></form>
 				<div align="center">Total no of pages - $scount<br/>
 				Total price - $price Rs.
-				</div>
-				</div>
-				</div>
-				</div>
 				</div>
 				</div>
 			INP;
