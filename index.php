@@ -7,6 +7,18 @@
 <body>
 	<?php
 		if(isset($_POST["delfile"])){
+			$pdf = file_get_contents($_POST["delfile"]);
+			$number = preg_match_all("/\/Page\W/", $pdf, $dummy);
+			$myfile = fopen("Files/".$_SESSION["userEmail"]."/count.txt", "r");
+			$scount=intval(fgets($myfile));
+			fclose($myfile);
+			$myfile = fopen("Files/".$_SESSION["userEmail"]."/count.txt", "w");
+			$scount=$scount-intval($number);
+			fwrite($myfile, strval($scount));
+			fclose($myfile);
+			$myfile = fopen("Files/".$_SESSION["userEmail"]."/price.txt", "w");
+			fwrite($myfile,strval($scount*2));
+			fclose($myfile);
 			unlink(strval($_POST["delfile"]));
 		}
 		function wrapper($filename){
