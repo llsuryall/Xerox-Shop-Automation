@@ -17,25 +17,12 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.btn {
-    border-radius: 6px;
-}
-
-.modal {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
 .card {
     height: 370px;
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
     background-color: rgba(0, 0, 0, 0.8);
-}
-
-.navbar {
-    align-content: right;
-    background-color: rgba(0, 0, 0, 0.55);
 }
 
 .card-header h3 {
