@@ -17,6 +17,10 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+.btn {
+    border-radius: 6px;
+}
+
 .modal {
     background-color: rgba(0, 0, 0, 0.8);
 }
