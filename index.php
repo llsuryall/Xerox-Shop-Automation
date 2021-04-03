@@ -7,8 +7,9 @@
 <body>
 	<?php
 		$not_loggedin=<<<NOT_LOGGEDIN
+			Not logged in.
 			<h1 align="center">
-				<a href="login.html">Login</a>
+				<a href="index.html">Login</a>
 				<br/>
 				or
 				<br/>
