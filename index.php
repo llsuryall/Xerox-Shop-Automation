@@ -50,7 +50,7 @@
 		if(!isset($_SESSION["userEmail"])){
 			header("Location: login.php");
 		}else{
-			echo '<div class="navbar"><div align="right">'.$_SESSION["userEmail"]." <a href=\"logout.php\">Logout</a>".'</h3></div>';
+			echo '<div class="card"><div align="right">'.$_SESSION["userEmail"]." <a href=\"logout.php\">Logout</a>".'</h3></div></div>';
 			$myfile = fopen('Files/'.$_SESSION["userEmail"]."/"."price.txt", "r");
 			$price=strval(fgets($myfile));
 			fclose($myfile);
@@ -59,8 +59,11 @@
 			fclose($myfile);
 			$input = <<<INP
 				<br/><br/>
-				<form  action="addfiles.php" method="post" enctype="multipart/form-data">
-					<input id="files" name="files[]" accept="application/pdf"  type="file" onchange="change_count(this);" required multiple/>
+				<div class="container">
+				<div class="row">
+				<div class ="col>
+				<form align="center" action="addfiles.php" method="post" enctype="multipart/form-data">
+					<input id="files" name="files[]" accept="application/pdf" type="file" onchange="change_count(this);" required multiple/>
 					<input id="count" name="count" type="hidden" value="0"/>
 					<input name="submit" class="btn btn-primary" type="submit" value="Upload"/>
 				</form>
@@ -74,6 +77,7 @@
 				Total price - $price Rs.
 				</div>
 				</div>
+			<div class="col">
 			INP;
 			echo $input;
 			$mydir = 'Files/'.$_SESSION["userEmail"]."/";
@@ -82,7 +86,7 @@
 			foreach($myfiles as $filename){
 				echo wrapper($filename).'<br/><br/>';
 			}
-			echo '</div></div>';
+			echo '</div></div></div>';
 			
 		}
 	?>
