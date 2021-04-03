@@ -31,6 +31,7 @@
     <title>Sign-up Page</title>
         <meta name="viewport" content="width=device-width, initial-scale=0.8" />
     <meta charset="utf-8" />
+    <link rel="icon" type="icon/png" href="Icons/ico.png"/>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
