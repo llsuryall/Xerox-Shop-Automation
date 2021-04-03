@@ -1,5 +1,5 @@
 <?php
 	session_start();
 	unset($_SESSION["userEmail"]);
-	echo "Logged out successfully!";
+	header("Location: login.php?success=logout");
 ?>

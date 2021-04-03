@@ -35,7 +35,7 @@
 			return $html;
 		}
 		if(!isset($_SESSION["userEmail"])){
-			header("Location: index.html");
+			header("Location: login.php");
 		}else{
 			echo $_SESSION["userEmail"]." <a href=\"logout.php\">Logout</a>";
 			$myfile = fopen('Files/'.$_SESSION["userEmail"]."/"."price.txt", "r");

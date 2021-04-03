@@ -94,10 +94,10 @@
 			$res=mysqli_stmt_get_result($stmt);
 			mysqli_stmt_close($stmt);
 			mkdir("Files/".$email_id);
-			$myfile = fopen("Files/".$_POST["email"]."/count.txt", "w");
+			$myfile = fopen("Files/".$email_id."/count.txt", "w");
 			fwrite($myfile, "0");
 			fclose($myfile);
-			$myfile = fopen("Files/".$_POST["email"]."/price.txt", "w");
+			$myfile = fopen("Files/".$email_id."/price.txt", "w");
 			fwrite($myfile, "0");
 			fclose($myfile);
 			return true;
