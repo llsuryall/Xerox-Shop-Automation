@@ -62,7 +62,7 @@
 				<div class="row">
 				<div class ="col>
 				<form align="center"  action="addfiles.php" method="post" enctype="multipart/form-data">
-					<input id="files" name="files[]" accept="application/pdf" class="btn btn-primary" type="file" onchange="change_count(this);" required multiple/>
+					<input id="files" name="files[]" accept="application/pdf"  type="file" onchange="change_count(this);" required multiple/>
 					<input id="count" name="count" type="hidden" value="0"/>
 					<input name="submit" type="submit" value="Upload"/>
 				</form>
