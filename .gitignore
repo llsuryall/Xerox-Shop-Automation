@@ -1,4 +1,7 @@
 error.log
 Files/*.*
+Files/*/*.*
+Files/*/*
 Images/*.*
 ver_codes/*.*
+otp.txt
