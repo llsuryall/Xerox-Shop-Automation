@@ -34,7 +34,7 @@
 					<form action="index.php" method="post">
 						$filename
 						<input type="hidden" name="delfile" value="Files/$user/$filename"/>	
-						<input type="submit" value="Delete"/>
+						<input type="submit"  class="btn btn-danger" value="Delete"/>
 					</form>
 				</div>
 			SOM;
