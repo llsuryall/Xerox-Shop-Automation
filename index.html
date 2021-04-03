@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Interface</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+    <meta charset="utf-8" />
+
+
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+
+
+    <!--   <div class="jumbotron jumbotron-fluid">
+    </div>  -->
+    <div class="container">
+
+
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <button type="button" class="btn btn-primary" id="addbutton" data-toggle="modal" data-target="#add_modal">Add</button>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div class="modal" id="add_modal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-header">Add Files</h3>
+                        <div class="justify-content-end">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                    </div>
+                    <form class="was-validated" id="Upload_form">
+                        <div class="modal-body">
+                            <div class="card card-body bg-light">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" id="fname" placeholder="File Name" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Please fill out this field.</div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" id="file_location"></div>
+                                    <div class="col">
+                                        <button class='btn btn-primary' id="browse_button" type="file" multiple>Browse</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-success" id="UploadSubmit">Submit</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-xl" id="task_area">
+
+
+        </div>
+
+
+        <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
