@@ -23,6 +23,10 @@ body {
     background-color: rgba(0, 0, 0, 0.55);
 }
 
+.card-header{	
+    background-color:rgba(0, 0, 0, 0.5);!important
+}
+
 .card-header h3 {
     color: white;
     text-align: center;
