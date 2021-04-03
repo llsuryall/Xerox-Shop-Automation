@@ -6,7 +6,7 @@ body {
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
-    color:white;
+    color: white;
     font-family: 'Numans', sans-serif;
 }
 
@@ -14,6 +14,7 @@ body {
     height: 100%;
     width: 100%;
     align-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .card {
@@ -21,7 +22,7 @@ body {
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .card-header h3 {
@@ -29,7 +30,7 @@ body {
     text-align: center;
 }
 
-.card-header{	
+.card-header {
     background-color: rgba(0, 0, 0, 0.8) !important;
 }
 
@@ -75,8 +76,8 @@ input:focus {
     margin-left: 4px;
 }
 
-a{
-	color:lightgrey;
+a {
+    color: lightgrey;
 }
 
 .card-body {
