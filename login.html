@@ -33,7 +33,7 @@
           </div>
           <div class="card-body">
             <br />
-            <form>
+            <form action="login_auth.php" method="post">
               <div class="input-group form-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"
@@ -41,9 +41,10 @@
                   ></span>
                 </div>
                 <input
+                  name="email_id"
                   type="text"
                   class="form-control"
-                  placeholder="username"
+                  placeholder="email id"
                   required
                 />
                 <div class="valid-feedback">Valid.</div>
@@ -61,11 +62,14 @@
                   placeholder="password"
                   required
                 />
+                <input 
+                  id="passwordhash"
+                  type="hidden"
+                  name="passwordhash"
+                  value="none"
+                />
                 <div class="valid-feedback">Valid.</div>
                 <div class="invalid-feedback">Password is required.</div>
-              </div>
-              <div class="row align-items-center remember">
-                <input type="checkbox" />Remember Me
               </div>
               <div class="form-group">
                 <input
