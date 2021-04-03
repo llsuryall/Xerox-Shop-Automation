@@ -20,8 +20,8 @@
 		$myfile = fopen("Files/".$_SESSION["userEmail"]."/price.txt", "w");
 		fwrite($myfile, "0");
 		fclose($myfile);
-		echo "<h2>Done!</h2>";
+		header("Location: index.php?print=success");
 	}else{
-		echo "<h2>Invalid otp!</h2>";
+		header("Location: index.php?error=invalidOTP");
 	}
 ?>

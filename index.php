@@ -1,9 +1,15 @@
 <?php session_start();?>
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Login or Signup</title>
-</head>
+	<head>
+		<title>Files to print</title>
+		<meta name="viewport" content="width=device-width, initial-scale=0.8" />
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link href="CSS/main.css" rel="stylesheet"/>
+	</head>
 <body>
 	<?php
 		if(isset($_POST["delfile"])){
@@ -24,20 +30,26 @@
 		function wrapper($filename){
 			$user=$_SESSION["userEmail"];
 			$html=<<<SOM
-				<div align="center" class="container">
+				<div style="display:inline-block;border-radius:2em;" align="center" class="card-header">
 					<form action="index.php" method="post">
 						$filename
 						<input type="hidden" name="delfile" value="Files/$user/$filename"/>	
-						<input type="submit" value="delete"/>
+						<input type="submit" value="Delete"/>
 					</form>
 				</div>
 			SOM;
 			return $html;
 		}
+		if(isset($_GET["print"])){
+			echo '<script type="text/javascript">window.onload=function(){alert("Printed successfully!");}</script>';
+		}
+		if(isset($_GET["error"])){
+			echo '<script type="text/javascript">window.onload=function(){alert("Invalid OTP!");}</script>';
+		}
 		if(!isset($_SESSION["userEmail"])){
 			header("Location: login.php");
 		}else{
-			echo $_SESSION["userEmail"]." <a href=\"logout.php\">Logout</a>";
+			echo '<div class="card-header"><div align="right">'.$_SESSION["userEmail"]." <a href=\"logout.php\">Logout</a>".'</h3></div>';
 			$myfile = fopen('Files/'.$_SESSION["userEmail"]."/"."price.txt", "r");
 			$price=strval(fgets($myfile));
 			fclose($myfile);
@@ -57,18 +69,20 @@
 					<input id="sub_but" name="submit" type="hidden" value="Verify"/>
 				</form><br/>
 				<form align="center" action="payment.php"><input type="submit" value="Pay Rs. $price"/></form>
-				<br/><br/>
 				<div align="center">Total no of pages - $scount<br/>
 				Total price - $price Rs.
 				</div>
+			</div>
 			INP;
 			echo $input;
 			$mydir = 'Files/'.$_SESSION["userEmail"]."/";
 			$myfiles = array_diff(scandir($mydir), array('.', '..',"count.txt","price.txt"));
-			echo "<br/>";
+			echo '<br/><div align="center">';
 			foreach($myfiles as $filename){
-				echo wrapper($filename).'<br/>';
+				echo wrapper($filename).'<br/><br/>';
 			}
+			echo '</div>';
+			
 		}
 	?>
 	<script>
