@@ -49,7 +49,7 @@
 		if(!isset($_SESSION["userEmail"])){
 			header("Location: login.php");
 		}else{
-			echo '<div class="card"><div align="right">'.$_SESSION["userEmail"]." <a href=\"logout.php\">Logout</a>".'</h3></div></div>';
+			echo '<div class="navbar"><div align="right">'.$_SESSION["userEmail"]." <a href=\"logout.php\">Logout</a>".'</h3></div></div>';
 			$myfile = fopen('Files/'.$_SESSION["userEmail"]."/"."price.txt", "r");
 			$price=strval(fgets($myfile));
 			fclose($myfile);
