@@ -4,7 +4,7 @@ body {
     background-image: url('../Images/login.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
+    height: auto;
     width: 100%;
     color: white;
     font-family: 'Numans', sans-serif;
@@ -22,6 +22,10 @@ body {
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
