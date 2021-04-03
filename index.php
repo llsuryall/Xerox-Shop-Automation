@@ -34,18 +34,8 @@
 			SOM;
 			return $html;
 		}
-		$not_loggedin=<<<NOT_LOGGEDIN
-			Not logged in.
-			<h1 align="center">
-				<a href="index.html">Login</a>
-				<br/>
-				or
-				<br/>
-				<a href="signup.html">Signup</a>
-			</h1>
-		NOT_LOGGEDIN;
 		if(!isset($_SESSION["userEmail"])){
-			echo $not_loggedin;
+			header("Location: index.html");
 		}else{
 			echo $_SESSION["userEmail"]." <a href=\"logout.php\">Logout</a>";
 			$myfile = fopen('Files/'.$_SESSION["userEmail"]."/"."price.txt", "r");
